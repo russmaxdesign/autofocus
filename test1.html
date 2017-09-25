@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Autofocus test 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Focus test 1</h1>
+    <p><a href="index.html">Back to index page</a></p>
+    <p>This example sets focus on a specific element using JavaScript</p>
+    <form action="#" class="form">
+      <div class="input">
+        <label class="input__label" for="form-name">
+          <span class="input__content">Name</span>
+          <input class="input__control" type="text" id="form-name">
+        </label>
+      </div>
+      <div class="input">
+        <label class="input__label" for="form-email">
+          <span class="input__content">Email</span>
+          <input class="input__control" type="text" id="form-email">
+        </label>
+      </div>
+      <div class="input">
+        <label class="input__label" for="form-password">
+          <span class="input__content">Password</span>
+          <input class="input__control" type="password" id="form-password">
+        </label>
+      </div>
+    </form>
+    <p><a href="index.html">Back to index page</a></p>
+  </div>
+
+  <script language='javascript' type='text/javascript'>
+    function SetFocus()
+    {
+        // safety check, make sure its a post 1999 browser
+        if (!document.getElementById)
+        {
+            return;
+        }
+
+        var txtMyInputBoxElement = document.getElementById("form-email");
+
+        if (txtMyInputBoxElement != null)
+        {
+            txtMyInputBoxElement.focus();
+        }
+    }
+    SetFocus();
+  </script>
+</body>
+</html>
